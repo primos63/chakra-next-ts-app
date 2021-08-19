@@ -1,15 +1,15 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { Box } from '@chakra-ui/layout'
 import {
-  Box,
   Container,
   Flex,
   IconButton,
   Link,
   useColorMode,
 } from '@chakra-ui/react'
-import { BodyStyle } from '../components/BodyStyle'
+import { BodyStyle } from '../../components/BodyStyle'
 
-const Index = () => {
+export default function AboutPage() {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -18,19 +18,20 @@ const Index = () => {
         sx={{
           body: {
             dark: {
-              background: 'blue.800',
+              background: 'green.800',
               color: 'whiteAlpha.900',
             },
             light: {
-              background: 'blue.100',
+              background: 'green.100',
               color: 'gray.900',
             },
           },
         }}
       />
+
       <Flex alignItems='center'>
-        <Link flexGrow={1} href='/about'>
-          About Us
+        <Link flexGrow={1} href='/'>
+          Home
         </Link>
 
         <IconButton
@@ -44,8 +45,8 @@ const Index = () => {
           }}
         />
       </Flex>
-      <Box>HOME PAGE</Box>
+
+      <Box>About us</Box>
     </Container>
   )
 }
-export default Index
